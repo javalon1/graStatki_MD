@@ -11,6 +11,8 @@ public class Gra {
         Plansza plansza2 = new Plansza();
         plansza2.utworzPlansze();
 
+        plansza1.drukujPlansze();
+
         //Gracz1 rozstaw statki - set plansza1
         //Drukuj plansze ze statkami
         //Gracz2 rozstaw statki - set plansza2

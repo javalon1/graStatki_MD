@@ -47,6 +47,25 @@ public class Plansza {
             }
         } System.out.println();
     }
+
+//    public static char[][] zaznaczPudlo(char[][] plansza, int i, int j) {
+//        plansza[i][j] = '*';
+//        return plansza;
+//    }
+//
+//    public static char[][] zaznaczTrafiony(char[][]plansza,int i, int j) {
+//        plansza[i][j] = 'X';
+//        return plansza;
+//    }
+//
+//    public static char[][] ustawStatek(char[][]plansza,int i, int j) {
+//        plansza[i][j] = 'S';
+//        return plansza;
+//    }
+
+
+
+
 }
 
 
