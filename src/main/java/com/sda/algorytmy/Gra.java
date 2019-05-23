@@ -11,7 +11,10 @@ public class Gra {
         Plansza plansza2 = new Plansza();
         plansza2.utworzPlansze();
 
-       // plansza1.ustawStatek(plansza1, 5, 5);
+
+       plansza1.ustawStatek(5, 5);
+       plansza1.zaznaczPudlo(4,4);
+       plansza1.zaznaczTrafiony(3,3);
 
         plansza1.drukujPlanszeStatki();
 
