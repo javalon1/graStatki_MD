@@ -1,7 +1,7 @@
 package com.sda.algorytmy;
 
 public class Plansza {
-    char[][] plansza = new char[11][11];
+    char[][] plansza = new char[10][11];
 
     public char getPlansza(int i, int j) {
         return plansza[i][j];
@@ -12,23 +12,20 @@ public class Plansza {
 //    }
 
     public void utworzPlansze() {
-        for (int i = 0; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 11; j++) {
-                if (i == 0) {
-                    plansza[i][j] = (char) (48 + j);
-                } else if (j == 0) {
-                    plansza[i][j] = (char) (64 + i);
+                if (j == 0) {
+                    plansza[i][j] = (char) (65 + i);
                 } else {
                     plansza[i][j] = '0';
                 }
-                plansza[0][10] = '1';
-                plansza[0][0] = ' ';
             }
         }
     }
 
     public void drukujPlansze() {
-        for (int i = 0; i < 11; i++) {
+        System.out.println("  1 2 3 4 5 6 7 8 9 10");
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 11; j++) {
                 //Wyjatek zeby nie drukowac statkow
                 if (plansza[i][j] == 'S') {
@@ -36,16 +33,19 @@ public class Plansza {
                 } else {
                     System.out.print(plansza[i][j] + " ");
                 }
-            } System.out.println();
+            }
+            System.out.println();
         }
     }
 
     public void drukujPlanszeStatki() {
-        for (int i = 0; i < 11; i++) {
+        System.out.println("  1 2 3 4 5 6 7 8 9 10");
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 11; j++) {
                 System.out.print(plansza[i][j] + " ");
             }
-        } System.out.println();
+            System.out.println();
+        }
     }
 
 //    public static char[][] zaznaczPudlo(char[][] plansza, int i, int j) {
@@ -58,14 +58,15 @@ public class Plansza {
 //        return plansza;
 //    }
 //
-//    public static char[][] ustawStatek(char[][]plansza,int i, int j) {
+//    public static char[][] ustawStatek(char[][] plansza, int i, int j) {
 //        plansza[i][j] = 'S';
 //        return plansza;
 //    }
 
 
-
-
+//    public void ustawStatek(Plansza P, int i, int j) {
+//        plansza[i][j] = 'S';
+//    }
 }
 
 
