@@ -26,31 +26,38 @@ public class Ruch {
     public static void ustawianieStatkow(Plansza plansza, Scanner scanner, int gracz) {
         System.out.println("Gracz " + gracz + " - Rozstaw swoje statki:");
         plansza.drukujPlansze();
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 2; i++) {
             String statek = scanner.next();
             plansza.ustawStatek(Ruch.wspI(statek), Ruch.wspJ(statek));
 
         }
     }
 
-    public static void strzelanie(Plansza plansza, Scanner scanner, int gracz, int trafienia) {
+    public static void strzelanie(Plansza plansza, Scanner scanner, int gracz, int trafienia, boolean ruch) {
         while (true) {
             System.out.println("Gracz " + gracz + " strzela:");
             plansza.drukujPlansze();
             String strzal = scanner.next();
             if (plansza.getPlansza(Ruch.wspI(strzal), Ruch.wspJ(strzal)) == 'S') {
                 System.out.println("Trafiony!");
+                System.out.println();
                 plansza.zaznaczTrafiony(Ruch.wspI(strzal), Ruch.wspJ(strzal));
                 trafienia++;
-                if (trafienia == 4){
+                if (trafienia == 2){
+                    plansza.drukujPlansze();
                     System.out.println("Bum! Wygrales!!! ");
+                    System.exit(0);
                 }
             } else {
                 System.out.println("Pudlo!");
+                System.out.println();
                 plansza.zaznaczPudlo(Ruch.wspI(strzal), Ruch.wspJ(strzal));
+                ruch = !ruch;
                 break;
+                }
+
             }
         }
     }
-}
+
 
